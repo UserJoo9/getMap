@@ -60,25 +60,6 @@ def getInfoByNumber():
     except:
         print("\nCan't Get Number Carrier!")
 
-# def qrCodeGEnrator():
-#     link = input("Enter Target: ")
-#     nameOfCode = input("Enter Name Of QRCode: ")
-#     try:
-#         if link != '' and nameOfCode !='':
-#             qr = qrcode.QRCode(version=1, error_correction=qrcode.constants.ERROR_CORRECT_L, box_size=10, border=2,)
-#             qr.add_data(link)
-#             qr.make(fit=True)
-#             img = qr.make_image()
-#             img.save(f'{nameOfCode}.png')
-#             filePath=os.getcwd()+'\\'+nameOfCode+'.png'
-#             print("Saved In Path: ", filePath)
-#
-#         else:
-#             print("You Must Type Target and Name for it to Generate QrCode")
-#             qrCodeGEnrator()
-#     except:
-#         print("An Error, try again later or choose another name")
-
 
 print("\n************** Get-Map **************\n")
 print("Welcome to Get-Map\n")

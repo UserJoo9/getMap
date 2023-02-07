@@ -336,23 +336,9 @@ def MainMenu(*args):
                               command=locationByNumber)
     LocationByNumber.pack()
 
-    # GenrateQrCode = Button(top, text='Generate Qr Code', font='Arial 12 bold', activeforeground='gray',
-    #                        bg='red', width=25,
-    #                        command=genrateQrCodeUi)
-    # GenrateQrCode.pack(pady=15)
-
-    # exiT = Button(top, text='Exit', font='Arial 12 bold', activeforeground='gray',
-    #               bg='red', width=25,
-    #               command=Exit)
-    # exiT.pack(pady=20)
-
     Developer = Button(top, text='Dev by: Youssef Alkhodary', font='Arial 8 bold', fg='white', bg='black', width=25,
                            command=developer, height=1, borderwidth=0)
     Developer.pack(pady=15)
-
-
-# def Exit(*args):
-#     top.destroy()
 
 def developer(*args):
     webbrowser.open_new_tab("https://userjoo9.github.io/youssefinfo/#main")
@@ -390,15 +376,16 @@ def checkPassword(*args):
             Developer.destroy()
             MainMenu()
             messagebox.showinfo("Notify!", "Welcome !!\nاهلا بيك في برنامج جيت ماب, لا تستخدم البرنامج في ما لا يرضي الله")
+        else:
+            messagebox.showerror("Password error", "Password is wrong!!\nالباسورد غلط متحاولش فيه كتير")
+            yesNo = messagebox.askokcancel("Update", "Do you want check updates...\nافتح الموقع شوف التحديثات الجديده")
+            if yesNo:
+                developer()
+            else:
+                pass
     except:
         messagebox.showerror("Connection error", "Check internet connection and try again")
-    else:
-        messagebox.showerror("Password error", "Password is wrong!!\nالباسورد غلط متحاولش فيه كتير")
-        yesNo = messagebox.askokcancel("Update", "Do you want check updates...\nافتح الموقع شوف التحديثات الجديده")
-        if yesNo:
-            developer()
-        else:
-            pass
+
 
 #-------------------------------------------- __home__ ----------------------------------------------#
 
